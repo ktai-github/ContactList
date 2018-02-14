@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "InputCollector.h"
+#import "Contact.h"
 
 int main(int argc, const char * argv[]) {
   @autoreleasepool {
@@ -18,6 +19,17 @@ int main(int argc, const char * argv[]) {
 
       if ([userInput isEqualToString:@"new\n"]) {
         NSLog(@"new entered");
+        Contact *person = [[Contact alloc] init];
+        
+        char userPersonName[255];
+        fgets(userPersonName, 255, stdin);
+        NSString *userPersonNameString = [NSString stringWithCString:userPersonName encoding:NSUTF8StringEncoding];
+        person.name = userPersonNameString;
+        
+        char userPersonEmail[255];
+        fgets(userPersonEmail, 255, stdin);
+        NSString *userPersonEmailString = [NSString stringWithCString:userPersonEmail encoding:NSUTF8StringEncoding];
+        person.name = userPersonEmailString;
 
       } else if ([userInput isEqualToString:@"list\n"]) {
         NSLog(@"list entered");
