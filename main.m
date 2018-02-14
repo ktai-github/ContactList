@@ -53,10 +53,12 @@ int main(int argc, const char * argv[]) {
       } else if ([userInput isEqualToString:@"list\n"]) {
         NSLog(@"list entered");
         
-//#:<%@> ()", contactList);
-        
-        
-        
+        for (int i = 0 ; i < [contactList.contactArray count]; i++){
+          Contact *displayContact = [[Contact alloc] init];
+          displayContact = [contactList.contactArray objectAtIndex:i];
+          NSLog(@"%@", displayContact.name);
+        }
+      
       } else {
       
         return 0;

@@ -24,7 +24,7 @@
   [self.contactArray addObject:newContact];
   Contact *person = [[Contact alloc] init];
   person = _contactArray[0];
-  NSLog(@"contact: %@", person.name);
+//  NSLog(@"contact: %@", person.name);
   
 }
 
