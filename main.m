@@ -29,7 +29,7 @@ int main(int argc, const char * argv[]) {
         char userPersonEmail[255];
         fgets(userPersonEmail, 255, stdin);
         NSString *userPersonEmailString = [NSString stringWithCString:userPersonEmail encoding:NSUTF8StringEncoding];
-        person.name = userPersonEmailString;
+        person.email = userPersonEmailString;
 
       } else if ([userInput isEqualToString:@"list\n"]) {
         NSLog(@"list entered");
